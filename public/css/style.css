@@ -1,0 +1,278 @@
+/* --- GERAL --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #004a91;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+header {
+    background-color: #004a91;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #003366;
+}
+
+/* --- FORMULÁRIOS (Cadastro e Analisador) --- */
+.form-cadastro, .analisador-periodo {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.form-cadastro h3, .analisador-periodo h3 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="month"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004a91;
+}
+
+/* --- TABELAS --- */
+.tabela-container {
+    width: 100%;
+    overflow-x: auto; /* Permite rolagem horizontal em tabelas grandes */
+}
+
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.tabela-dados th, .tabela-dados td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabela-dados th {
+    background-color: #f0f0f0;
+    font-size: 0.9em;
+}
+
+.tabela-dados tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Tabela de Escala Específica */
+.tabela-escala th, .tabela-escala td {
+    text-align: center;
+    min-width: 50px;
+}
+.tabela-escala th:first-child, .tabela-escala td:first-child {
+    text-align: left;
+    min-width: 150px;
+    position: sticky; /* Trava a coluna do nome ao rolar */
+    left: 0;
+    background-color: #f9f9f9;
+}
+
+/* Coluna de Análise Destacada */
+.coluna-analise {
+    background-color: #fffbdd !important;
+    font-weight: bold;
+    border-color: #ffeb3b !important;
+}
+
+/* --- DASHBOARD (HOME) --- */
+.dashboard-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #e9ecef;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Colunas de análise atualizadas */
+.coluna-meta-ajustada,
+.coluna-total-realizado,
+.coluna-saldo {
+    background-color: #fcf8e3 !important;
+    font-weight: bold;
+}
+
+/* --- ESTILOS DE FORMULÁRIO PADRONIZADOS --- */
+
+/* O contêiner do formulário principal (para cadastros/edições) */
+.form-padrao {
+    max-width: 600px; 
+    margin: 20px auto; /* Centraliza o formulário */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Formulários de filtro (mais simples, na horizontal) */
+.form-filtro {
+    max-width: none;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os campos quebrem a linha */
+    gap: 15px;
+    align-items: flex-end; /* Alinha os botões e labels */
+}
+.form-filtro .form-group {
+    margin-bottom: 0; 
+}
+.form-filtro h3 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+/* Padroniza todos os inputs e selects dentro dos forms */
+.form-padrao .form-group input[type="text"],
+.form-padrao .form-group input[type="email"],
+.form-padrao .form-group input[type="password"],
+.form-padrao .form-group input[type="number"],
+.form-padrao .form-group input[type="month"],
+.form-padrao .form-group input[type="date"],
+.form-padrao .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 14px;
+}
+
+/* --- BOTÕES PADRONIZADOS --- */
+
+/* Botão principal (Salvar, Enviar, Gerar) */
+.btn-submit {
+    background-color: #004a91;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-submit:hover {
+    background-color: #003a71;
+}
+
+/* Botão de Cancelar ou Secundário */
+.btn-cancelar {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #f4f4f4;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.btn-cancelar:hover {
+    background-color: #e9e9e9;
+}
+

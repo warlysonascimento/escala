@@ -1,0 +1,13 @@
+{
+    "name": "vendor/sistema-escala",
+    "description": "Description of project sistema_escala.",
+    "authors": [
+        {
+            "name": "warly",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}
